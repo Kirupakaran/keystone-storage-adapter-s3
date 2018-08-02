@@ -20,7 +20,9 @@ var DEFAULT_OPTIONS = {
 	region: process.env.S3_REGION || 'us-east-1',
 	path: '/',
 	generateFilename: nameFunctions.randomFilename,
-	uploadParams: {},
+	uploadParams: {
+		ACL: 'public-read',
+	},
 };
 
 function ensureLeadingSlash (filename) {
